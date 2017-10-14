@@ -1,0 +1,21 @@
+/*
+ * Controller.cpp
+ *
+ *  Created on: Mar 8, 2011
+ *      Author: Kendrick Wiersma
+ */
+
+#include <altera_avalon_spi.h>
+#include <system.h>
+
+int main() {
+	alt_u8* myBuff;
+    alt_u8* myWrite;
+    myWrite[0] = 0x61;
+	for(;;){
+		int myDumbValue = alt_avalon_spi_command(SPI_0_BASE, 0, 8, myWrite, 8, myBuff, 0 );
+	}
+}
+
+
+
